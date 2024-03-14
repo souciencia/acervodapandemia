@@ -1,0 +1,282 @@
+/**
+ * Theme Name: Sou Ciência: Necropolítica
+ * Description: Tema filho do Blocksy para o projeto Necropolítica do Sou Ciência integrado ao Tainacan
+ * Author: Mateus Wetah
+ * Template: blocksy
+ * Text Domain: souciencia
+ * Version: 0.1.0
+ */
+.wp-block-group.is-style-souciencia-clickable-card > .wp-block-image img,
+.wp-block-group.is-style-souciencia-clickable-card > .wp-block-image img {
+	box-shadow: none;
+	transition: box-shadow 0.2s ease-in-out;
+}
+.wp-block-group.is-style-souciencia-clickable-card:hover > .wp-block-image img,
+.wp-block-group.is-style-souciencia-clickable-card:focus > .wp-block-image img {
+    box-shadow: 0 0 16px 9px var(--theme-palette-color-2);
+}
+.wp-block-group.is-style-souciencia-clickable-card a,
+.wp-block-column.is-style-souciencia-clickable-card a{
+	text-decoration: none;
+}
+.wp-block-group.is-style-souciencia-clickable-card:hover a,
+.wp-block-column.is-style-souciencia-clickable-card:hover a,
+.wp-block-group.is-style-souciencia-clickable-card:focus a,
+.wp-block-column.is-style-souciencia-clickable-card:focus a {
+	color: var(--theme-palette-color-2);
+}
+.wp-block-column.is-style-souciencia-clickable-card:hover,
+.wp-block-column.is-style-souciencia-clickable-card:focus {
+	background-color:  var(--theme-palette-color-8);
+}
+.wp-block-column.is-style-souciencia-clickable-card,
+.wp-block-group.is-style-souciencia-clickable-card {
+	cursor: pointer;
+	position: relative;
+}
+.wp-block-column.is-style-souciencia-clickable-card a::before,
+.wp-block-group.is-style-souciencia-clickable-card a::before {
+	content: "";
+	width: 100%;
+	height: 100%;
+	display: block;
+	left: 0;
+	top: 0;
+	right: 0;
+	position: absolute;
+}
+
+.hotspots-container .hotspots-interaction {
+	margin: 0px;
+	align-items: center;
+}
+.hotspots-container .hotspots-placeholder .hotspot-initial {
+	font-weight: 600;
+	text-align: center;
+}
+
+.hotspots-container .hotspot-default {
+	filter: blur(0px);
+	transform: filter ease-in-out 0.4s;
+}
+.hotspots-container .hotspot-default:hover,
+.hotspots-container .hotspot-default:focus,
+.hotspots-container .hotspot-default.hotspot-active {
+	filter: blur(10px);
+}
+.hotspots-container .hotspot-thumb {
+	max-width: 200px;
+	margin: 12px auto 24px auto;
+	border-radius: 3px;
+}
+
+/* Mapa da Necropolítica no mobile */
+.wrap_svl {
+	min-width: 1024px;
+}
+.wrap_svl_center_box {
+	overflow: auto;
+	max-width: 100vw;
+}
+.wrap_svl_center {
+	width: 100% !important;
+}
+
+/* Tooltips do Mapa */
+#powerTip {
+	background: rgba(0,0,0,0.75);
+	font-size: 1.35rem;
+	padding: 1.5rem;
+	line-height: 1.35;
+}
+#powerTip h1,
+#powerTip h2,
+#powerTip h3,
+#powerTip h4 {
+	text-align: center;
+	font-size: 1.5rem;
+	color: #EBFF00;
+}
+#powerTip > * {
+	color: #EBFF00;
+}
+
+/* Breadcrumbs */
+.entry-header .ct-breadcrumbs a {
+	text-decoration: underline;
+}
+
+/* Player de áudio no Chrome */
+audio::-webkit-media-controls-panel {
+	filter: invert(1);
+    background: white;
+}
+
+/* Menu Mobile */
+.ct-drawer-canvas .ct-panel-actions .ct-panel-heading {
+	font-size: 2rem;
+}
+
+/* Customizações da lista de itens do Tainacan */
+.entry-content:not(.ct-container) .theme-items-list:not(.is-fullscreen) {
+	padding: 0px;
+	--theme-text-colorActive: var(--theme-palette-color-5);
+}
+.entry-content:not(.ct-container) .theme-items-list:not(.is-fullscreen) .search-control {
+	margin: 0;
+	background-color: var(--theme-palette-color-8);
+	padding: 2.75rem 3.75rem 1rem 3.75rem  !important;
+}
+.entry-content:not(.ct-container) .theme-items-list:not(.is-fullscreen) .search-control .button.is-white {
+	font-weight: 400;
+	text-transform: lowercase;
+	font-family: var(--theme-button-font-family);
+}
+.entry-content:not(.ct-container) .theme-items-list:not(.is-fullscreen) .search-control .label {
+	font-weight: 400;
+	text-transform: lowercase;
+	font-family: var(--theme-button-font-family);
+	color: var(--theme-palette-color-10) !important;
+}
+.entry-content:not(.ct-container) .theme-items-list:not(.is-fullscreen) #filters-modal .modal-content {
+	padding-left: 3.5rem !important;
+}
+.theme-items-list:not(.is-fullscreen).is-filters-menu-open .filters-menu {
+	border-right: 2px solid var(--theme-palette-color-6);
+}
+.theme-items-list:not(.is-fullscreen).is-filters-menu-open .filters-menu .filter-item-forms .label {
+	font-size: 0.75em;
+}
+.entry-content:not(.ct-container) .theme-items-list:not(.is-fullscreen) #advanced-search-container {
+	max-width: 100%;
+	width: 100%;
+	background-color: var(--theme-palette-color-8);
+	margin: 0px;
+	padding: 0px 1.875rem;
+}
+.entry-content:not(.ct-container) .theme-items-list:not(.is-fullscreen) #advanced-search-container button {
+	min-height: 48px !important;	
+	font-weight: 400;
+	text-transform: lowercase;
+	font-family: var(--theme-button-font-family);
+}
+.entry-content:not(.ct-container) .theme-items-list:not(.is-fullscreen) #advanced-search-container button[type=submit].is-secondary {
+	color: var(--theme-palette-color-8) !important;
+}
+.entry-content:not(.ct-container) .theme-items-list:not(.is-fullscreen) #items-list-results .metadata-title {
+	font-family: var(--theme-button-font-family);
+	padding-left: 0;
+}
+.entry-content:not(.ct-container) .theme-items-list:not(.is-fullscreen) #items-list-results .metadata-description {
+	font-size: 0.875em !important;
+}
+.entry-content:not(.ct-container) .theme-items-list:not(.is-fullscreen) .table-container {
+	padding-left: 3.25rem !important;
+	padding-right: 3.25rem !important;
+}
+body:not(.tainacan-admin-page) .tooltip,
+body:not(.tainacan-admin-page) .tainacan-modal,
+body:not(.tainacan-admin-page) .tainacan-dialog {
+	--tainacan-success: var(--theme-palette-color-1);
+	--tainacan-white: var(--theme-palette-color-5);
+}
+body:not(.tainacan-admin-page) .tainacan-modal .tainacan-dialog.tainacan-form .control-label {
+	font-size: 1.2em;
+}
+body:not(.tainacan-admin-page) .tainacan-modal .tainacan-dialog.tainacan-form .modal-card {
+	max-width: 568px;
+}
+body:not(.tainacan-admin-page) .tainacan-dialog .modal-card .modal-card-body {
+	color: var(--theme-palette-color-3);
+}
+.b-checkbox.checkbox input[type="checkbox"]:checked + .check {
+	--tainacan-input-background-color: var(--tainacan-secondary);
+}
+.exposed-metadata-control {
+	display: none;
+	visibility: hidden;
+}
+
+/* Card view mode custom version */
+.entry-content:not(.ct-container) .theme-items-list .tainacan-cards-container .tainacan-card .card-thumbnail,
+.entry-content:not(.ct-container) .theme-items-list .tainacan-cards-container .tainacan-card img,
+.entry-content:not(.ct-container) .theme-items-list .tainacan-cards-container .tainacan-card canvas {
+	width: 100px !important;
+	height: 100px !important;
+}
+.entry-content:not(.ct-container) .theme-items-list .tainacan-cards-container {
+	margin: 0 auto;
+}
+
+.tainacan-souciencia-grid-container {
+	min-height: 50vh;
+	margin: 1.5rem 1rem;	
+	padding: 0;
+	height: auto !important;
+	flex-wrap: wrap;
+	display: flex;
+	display: -ms-grid;
+	display: grid;
+	-ms-grid-columns: 460px 460px;
+	grid-template-columns: repeat(auto-fill, 460px);
+	gap: 2rem;
+	justify-content: space-evenly;
+	animation-name: appear;
+	animation-duration: 0.5s;
+}
+.tainacan-souciencia-grid-container .tainacan-souciencia-grid-item a {
+	display: flex;
+	gap: 1.25rem;
+	padding: 1rem;
+}
+.tainacan-souciencia-grid-container .tainacan-souciencia-grid-item a:hover {
+	background-color: var(--theme-palette-color-8);
+	text-decoration: none;
+}
+.tainacan-souciencia-grid-container .tainacan-souciencia-grid-item a .metadata-title h3 {
+	color: var(--theme-palette-color-3);
+	font-size: clamp(1.375rem, 0.956vw + 1.128rem, 2rem);
+	line-height: clamp(1.513rem, 1.663vw + 1.082rem, 2.6rem);
+}
+.tainacan-souciencia-grid-container .tainacan-souciencia-grid-item a:hover .metadata-title h3,
+.tainacan-souciencia-grid-container .tainacan-souciencia-grid-item a:focus .metadata-title h3 {
+	color: var(--theme-palette-color-2);
+	text-decoration: none;
+}
+.tainacan-souciencia-grid-container .tainacan-souciencia-grid-item a .souciencia-grid-item-thumbnail {
+	flex-shrink: 0;
+}
+.tainacan-souciencia-grid-container .tainacan-souciencia-grid-item a .souciencia-grid-item-thumbnail img {
+	height: 100px;
+	width: 100px;
+	background: var(--theme-palette-color-7);
+	border-radius: 100%;
+}
+#tainacanViewModesSection {
+	display: none;
+	visibility: hidden;
+}
+
+.tainacan-modal kbd,
+.theme-items-list kbd {
+	--tainacan-white: #222;
+	--tainacan-gray1: #444;
+	--tainacan-gray2: #666;
+	--tainacan-gray3: #777;
+}
+.tainacan-textual-search-input .dropdown-item .checkbox:hover .control-label {
+	color: white;
+}
+
+@media screen and (max-width: 986px) {
+	.entry-content:not(.ct-container) .theme-items-list:not(.is-fullscreen) .search-control {
+		padding: 2.5rem 1rem 0.5rem 1rem  !important;
+	}
+	.entry-content:not(.ct-container) .theme-items-list:not(.is-fullscreen) #filters-modal .modal-content {
+		padding-left: 1rem !important;
+	}
+	.entry-content:not(.ct-container) .theme-items-list:not(.is-fullscreen) .table-container {
+		padding-left: 1rem !important;
+		padding-right: 1rem !important;
+	}
+}

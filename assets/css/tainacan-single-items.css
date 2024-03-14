@@ -1,0 +1,194 @@
+.tainacan-item-single-page .tainacan-media-component {
+    --tainacan-media-background: var(--theme-palette-color-8);
+    --tainacan-media-metadata-color: var(--theme-palette-color-10);
+}
+.tainacan-item-single-page .tainacan-media-component .tainacan-media-component__swiper-main .swiper-slide-content audio {
+    background-color: transparent;
+}
+.tainacan-item-single-page .tainacan-media-component .tainacan-media-component__swiper-main li.swiper-slide .swiper-slide-metadata__name {
+    font-size: 1.25rem;
+}
+.tainacan-item-single-page .tainacan-media-component .tainacan-item-file-download {
+    position: unset;
+    opacity: 1;
+    font-size: 1.5rem;
+    color: var(--theme-palette-color-3);
+    width: auto;
+    display: inline-block;
+    transform: none;
+    background: transparent;
+    border: 2px solid var(--theme-palette-color-3);
+    padding: 0.25rem 2rem;
+    height: auto;
+    line-height: 1.25rem;
+    margin-top: 1.5rem;
+}
+.tainacan-item-single-page .tainacan-media-component .tainacan-item-file-download a {
+    font-size: 1.5rem;
+    color: var(--theme-palette-color-3);
+    line-height: 2rem;
+    font-weight: bold;
+    word-wrap: normal !important;
+    display: inline-block !important;
+}
+.tainacan-item-single-page .tainacan-media-component .tainacan-item-file-download:hover,
+.tainacan-item-single-page .tainacan-media-component .tainacan-item-file-download:focus {
+    border: 2px solid var(--theme-palette-color-1);
+}
+.tainacan-item-single-page .tainacan-media-component .tainacan-item-file-download:hover::after,
+.tainacan-item-single-page .tainacan-media-component .tainacan-item-file-download:focus::after {
+    color: var(--theme-palette-color-1);
+}
+.tainacan-item-single-page .tainacan-media-component .tainacan-item-file-download:hover a,
+.tainacan-item-single-page .tainacan-media-component .tainacan-item-file-download:focus a {
+    color: var(--theme-palette-color-1);
+}
+.tainacan-item-single-page .tainacan-media-component .tainacan-item-file-download::after {
+    position: initial;
+    display: inline;
+    margin-left: 24px;
+}
+.tainacan-item-single-page .tainacan-media-component__swiper-main .swiper-slide-content article,
+.tainacan-item-single-page .tainacan-item-single .tainacan-item-section__metadata .metadata-slug-transcricao .tainacan-metadata-value {
+    font-size: 1.625rem;
+    position: relative;
+    padding: 5rem 4rem;
+}
+.tainacan-item-single-page .tainacan-media-component__swiper-main .swiper-slide-content article::before,
+.tainacan-item-single-page .tainacan-media-component__swiper-main .swiper-slide-content article::after,
+.tainacan-item-single-page .tainacan-item-single .tainacan-item-section__metadata .metadata-slug-transcricao .tainacan-metadata-value::before,
+.tainacan-item-single-page .tainacan-item-single .tainacan-item-section__metadata .metadata-slug-transcricao .tainacan-metadata-value::after {
+    font-size: 20rem;
+    display: inline-block;
+    color: var(--theme-palette-color-10);
+    line-height: 8rem;
+    position: absolute;
+}
+.tainacan-item-single-page .tainacan-media-component__swiper-main .swiper-slide-content article::before,
+.tainacan-item-single-page .tainacan-item-single .tainacan-item-section__metadata .metadata-slug-transcricao .tainacan-metadata-value::before {
+    content: open-quote;
+    top: 0;
+    left: 0;
+}
+.tainacan-item-single-page .tainacan-media-component__swiper-main .swiper-slide-content article::after,
+.tainacan-item-single-page .tainacan-item-single .tainacan-item-section__metadata .metadata-slug-transcricao .tainacan-metadata-value::after {
+    content: close-quote;
+    bottom: -4rem;
+    right: 0;
+}
+.tainacan-item-single-page .tainacan-item-single .tainacan-item-section__metadata .metadata-slug-transcricao .tainacan-metadata-label {
+    margin-top: 4.5rem;
+    margin-bottom: 2.5rem;
+    font-size: 2rem;
+}
+.tainacan-item-single-page .tainacan-item-single .tainacan-item-section--metadata-sections {
+    -moz-column-gap: 7rem;
+    -moz-column-rule: none;
+    -webkit-column-gap: 7rem;
+    -webkit-column-rule: none;
+    column-gap: 7rem;
+    column-rule: none;
+    column-rule: 1px solid var(--theme-palette-color-10);
+    column-width: 400px;
+}
+.tainacan-item-single-page .tainacan-item-single .tainacan-item-section--metadata-sections > * {
+    break-inside: avoid;
+}
+.tainacan-item-single-page .tainacan-item-single .tainacan-item-section--metadata-sections > .tainacan-item-section--metadata:has(#metadata-section-transcricao),
+.tainacan-item-single-page .tainacan-item-single .tainacan-item-section--metadata-sections > .tainacan-item-section--metadata:has(#metadata-section-o-que-a-ciencia-diz) {
+    column-span: all;
+}
+.tainacan-item-single-page .tainacan-item-single h2.tainacan-single-item-section {
+    margin-top: 1rem;
+    color: var(--theme-palette-color-10);
+    --theme-font-size: 28px;
+}
+.tainacan-item-single-page .tainacan-item-single h2.tainacan-single-item-section:not(#metadata-section-dados-da-fonte-de-informacao):not(#metadata-section-o-que-a-ciencia-diz),
+.tainacan-item-single-page .tainacan-item-single .metadata-type-core_description {
+    visibility: hidden;
+    display: none !important;
+}
+.tainacan-item-single-page .tainacan-item-single .tainacan-item-section--metadata-sections > .tainacan-item-section--metadata:has(#metadata-section-o-que-a-ciencia-diz) {
+    padding-top: var(--wp--preset--spacing--70);
+    padding-bottom: var(--wp--preset--spacing--70);
+    background-color: var(--wp--preset--color--palette-color-12) !important;
+    color: var(--wp--preset--color--palette-color-9) !important;
+    position: relative;
+}
+.tainacan-item-single-page .tainacan-item-single .tainacan-item-section--metadata-sections > .tainacan-item-section--metadata:has(#metadata-section-o-que-a-ciencia-diz)::after {
+    content: "";
+    width: 100vw;
+    height: 100%;
+    background: var(--wp--preset--color--palette-color-12);
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: calc(-1 * (100vw - 100%)/2);
+}
+.tainacan-item-single-page .tainacan-item-single .tainacan-item-section--metadata-sections > .tainacan-item-section--metadata:has(#metadata-section-o-que-a-ciencia-diz) > * {
+    max-width: var(--wp--style--global--content-size);
+    margin-left: auto !important;
+    margin-right: auto !important;
+}
+.tainacan-item-single-page .tainacan-item-single .tainacan-item-section--metadata-sections > .tainacan-item-section--metadata:has(#metadata-section-o-que-a-ciencia-diz) a,
+.tainacan-item-single-page .tainacan-item-single .tainacan-item-section--metadata-sections > .tainacan-item-section--metadata:has(#metadata-section-o-que-a-ciencia-diz) a:focus,
+.tainacan-item-single-page .tainacan-item-single .tainacan-item-section--metadata-sections > .tainacan-item-section--metadata:has(#metadata-section-o-que-a-ciencia-diz) a:hover,
+.tainacan-item-single-page .tainacan-item-single .tainacan-item-section--metadata-sections > .tainacan-item-section--metadata:has(#metadata-section-o-que-a-ciencia-diz) p,
+.tainacan-item-single-page .tainacan-item-single .tainacan-item-section--metadata-sections > .tainacan-item-section--metadata:has(#metadata-section-o-que-a-ciencia-diz) ul,
+.tainacan-item-single-page .tainacan-item-single .tainacan-item-section--metadata-sections > .tainacan-item-section--metadata:has(#metadata-section-o-que-a-ciencia-diz) li,
+.tainacan-item-single-page .tainacan-item-single .tainacan-item-section--metadata-sections > .tainacan-item-section--metadata:has(#metadata-section-o-que-a-ciencia-diz) h2,
+.tainacan-item-single-page .tainacan-item-single .tainacan-item-section--metadata-sections > .tainacan-item-section--metadata:has(#metadata-section-o-que-a-ciencia-diz) h3,
+.tainacan-item-single-page .tainacan-item-single .tainacan-item-section--metadata-sections > .tainacan-item-section--metadata:has(#metadata-section-o-que-a-ciencia-diz) h4 {
+    color: var(--wp--preset--color--palette-color-9) !important;
+}
+.tainacan-item-single-page .tainacan-item-single .tainacan-item-section--metadata-sections > .tainacan-item-section--metadata:has(#metadata-section-o-que-a-ciencia-diz) .tainacan-item-section__metadata {
+    column-count: 1;
+}
+.tainacan-item-single-page .tainacan-item-single .tainacan-item-section--metadata-sections > .tainacan-item-section--metadata:has(#metadata-section-o-que-a-ciencia-diz) .tainacan-metadata-label {
+    display: none;
+}
+.tainacan-item-single-page .tainacan-item-single .tainacan-item-section--metadata-sections > .tainacan-item-section--metadata:has(#metadata-section-o-que-a-ciencia-diz) .metadata-type-ainacan_url_plugin_metadata_type .tainacan-metadata-label {
+    display: block !important;
+}
+.tainacan-item-single-page .tainacan-item-single .tainacan-item-section--metadata-sections > .tainacan-item-section--metadata:has(#metadata-section-o-que-a-ciencia-diz) .metadata-type-ainacan_url_plugin_metadata_type .tainacan-metadata-value {
+    margin-left: 2rem;
+}
+.tainacan-item-single-page .tainacan-item-single .tainacan-item-section--metadata-sections > .tainacan-item-section--metadata:has(#metadata-section-o-que-a-ciencia-diz) .metadata-type-ainacan_url_plugin_metadata_type .tainacan-metadata-value > .multivalue-separator {
+    display: none;
+}
+.tainacan-item-single-page .tainacan-item-single .tainacan-item-section--metadata-sections > .tainacan-item-section--metadata:has(#metadata-section-o-que-a-ciencia-diz) .metadata-type-ainacan_url_plugin_metadata_type .tainacan-metadata-value > :not(.multivalue-separator) {
+    display: list-item;
+}
+.tainacan-item-single-page .tainacan-item-single > .metadata-slug-descricao {
+    margin-bottom: 2rem;
+    border-bottom: 1px solid var(--theme-palette-color-10);
+    border-top: 2px solid var(--theme-palette-color-10);
+    padding-top: 2rem;
+    margin-top: 1rem;
+}
+.tainacan-item-single-page .tainacan-item-single .tainacan-item-section__metadata .metadata-slug-transcricao {
+    column-span: all;
+    display: block !important;
+}
+.tainacan-item-single-page .metadata-type-ainacan_url_plugin_metadata_type .tainacan-metadata-label {
+    display: none !important;
+}
+.tainacan-item-single-page .metadata-type-ainacan_url_plugin_metadata_type .wp-block-buttons {
+    margin-bottom: 1.5rem;
+}
+.tainacan-item-single-page .tainacan-item-section--metadata {
+    padding-bottom: 2.5rem;
+    border-bottom: 1px solid var(--theme-palette-color-10);
+}
+.tainacan-single-item-hero-notice {
+    text-align: center;
+    padding: 2.5rem 1rem 1rem 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+.tainacan-single-item-hero-notice p {
+    margin-bottom: 0;
+}
