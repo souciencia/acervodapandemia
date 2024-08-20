@@ -39,7 +39,7 @@ function souciencia_item_single_page_hero_after() {
 		return;
 
 	$tipo_de_evidencia_metadata_id = 60;
-	$tipo_de_evidencia_necropolitica_term = 'Necrodiscurso';
+	$tipo_de_evidencia_necropolitica_term = 'Necrodiscurso ou Necroconduta';
 	
 	$item = tainacan_get_item();
 	if ( !$item )
@@ -62,7 +62,7 @@ function souciencia_item_single_page_hero_after() {
 <div class="tainacan-single-item-hero-notice">
   <img src="<?php echo get_stylesheet_directory_uri() . '/assets/images/selo_mentira.png;' ?>"
     alt="<?php _e('Selo alerta de mentira'); ?>" />
-  <p><?php _e(' Este conteúdo traz desinformação. '); ?></p>
+  <p><?php _e(' Esta página pode trazer desinformação ou conduta contra evidências científicas. '); ?></p>
 </div>
 <?php endif;
 }
