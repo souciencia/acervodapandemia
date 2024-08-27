@@ -72,7 +72,8 @@ function updateViewAsLabel() {
 }
 
 function deathNumbersRizing() {
-  const number = document.getElementById('death-numbers');
+  if (window.location.href === "https://acervopandemia-souciencia.unifesp.br/") {
+    const number = document.getElementById('death-numbers');
   const date = document.getElementById('death-date');
   const totalDeaths = 712781;
   let interval;
@@ -160,6 +161,7 @@ function deathNumbersRizing() {
   }
   
   interval = setInterval(updateDeathNumber, t);
+  }
 }
 
 souCienciaPerformWhenDocumentIsLoaded(() => {
