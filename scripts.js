@@ -124,10 +124,10 @@ function deathNumbersRizing() {
       i+= increment;
       if (i >= totalDeaths) {
         clearInterval(interval);
-        number.innerText = totalDeaths.toLocaleString('pt-BR');
+        number.innerText = totalDeaths
       } else {
         while (i > dates[stepDate][0]) stepDate++  
-        number.innerText = Math.round(i).toLocaleString('pt-BR');
+        number.innerText = Math.round(i)
         date.innerText = dates[stepDate][1]
         adjustSpeed();
       }
