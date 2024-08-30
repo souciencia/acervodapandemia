@@ -74,93 +74,88 @@ function updateViewAsLabel() {
 function deathNumbersRizing() {
   if (window.location.href === "https://acervopandemia-souciencia.unifesp.br/") {
     const number = document.getElementById('death-numbers');
-  const date = document.getElementById('death-date');
-  const totalDeaths = 712781;
-  let interval;
-  let t = 800;
-  let i = 0;
-  let increment = 1;
-  let stepDate = 0
-  const dates = [
-    [0, "dezembro de 2019"],
-    [1, "março de 2020"],
-    [54, "abril de 2020"],
-    [200, "maio de 2020"],
-    [570, "junho de 2020"],
-    [1500, "julho de 2020"],
-    [3000, "agosto de 2020"],
-    [4900, "setembro de 2020"],
-    [5900, "outubro de 2020"],
-    [6800, "novembro de 2020"],
-    [7000, "dezembro de 2020"],
-    [7800, "janeiro de 2021"],
-    [12000, "fevereiro de 2021"],
-    [33000, "março de 2021"],
-    [57000, "abril de 2021"],
-    [65000, "maio de 2021"],
-    [71000, "junho de 2021"],
-    [85000, "julho de 2021"],
-    [98000, "agosto de 2021"],
-    [100000, "setembro de 2021"],
-    [210000, "outubro de 2021"],
-    [320000, "novembro de 2021"],
-    [430000, "dezembro de 2021"],
-    [540000, "janeiro de 2022"],
-    [650000, "fevereiro de 2022"],
-    [660000, "março de 2022"],
-    [670000, "abril de 2022"],
-    [680000, "maio de 2022"],
-    [690000, "junho de 2022"],
-    [700000, "julho de 2022"],
-    [710000, "agosto de 2022"],
-    [705000, "setembro de 2022"],
-    [707000, "outubro de 2022"],
-    [710000, "novembro de 2022"],
-    [711000, "dezembro de 2022"],
-    [712000, "janeiro de 2023"],
-  ]
-  
-  function updateDeathNumber() {
-    i+= increment;
-    if (i >= totalDeaths) {
+    const date = document.getElementById('death-date');
+    const totalDeaths = 712781;
+    let interval;
+    let t = 800;
+    let i = 0;
+    let increment = 1;
+    let stepDate = 0
+    const dates = [
+      [0, "dezembro de 2019"],
+      [1, "março de 2020"],
+      [54, "abril de 2020"],
+      [200, "maio de 2020"],
+      [570, "junho de 2020"],
+      [1500, "julho de 2020"],
+      [3000, "agosto de 2020"],
+      [4900, "setembro de 2020"],
+      [5900, "outubro de 2020"],
+      [6800, "novembro de 2020"],
+      [7000, "dezembro de 2020"],
+      [7800, "janeiro de 2021"],
+      [12000, "fevereiro de 2021"],
+      [33000, "março de 2021"],
+      [57000, "abril de 2021"],
+      [65000, "maio de 2021"],
+      [71000, "junho de 2021"],
+      [85000, "julho de 2021"],
+      [98000, "agosto de 2021"],
+      [100000, "setembro de 2021"],
+      [210000, "outubro de 2021"],
+      [320000, "novembro de 2021"],
+      [430000, "dezembro de 2021"],
+      [540000, "janeiro de 2022"],
+      [650000, "fevereiro de 2022"],
+      [660000, "março de 2022"],
+      [670000, "abril de 2022"],
+      [680000, "maio de 2022"],
+      [690000, "junho de 2022"],
+      [700000, "julho de 2022"],
+      [710000, "agosto de 2022"],
+      [705000, "setembro de 2022"],
+      [707000, "outubro de 2022"],
+      [710000, "novembro de 2022"],
+      [711000, "dezembro de 2022"],
+      [712000, "janeiro de 2023"],
+    ]
+    
+    function updateDeathNumber() {
+      i+= increment;
+      if (i >= totalDeaths) {
+        clearInterval(interval);
+        number.innerText = totalDeaths.toLocaleString('pt-BR');
+      } else {
+        while (i > dates[stepDate][0]) stepDate++  
+        number.innerText = Math.round(i).toLocaleString('pt-BR');
+        date.innerText = dates[stepDate][1]
+        adjustSpeed();
+      }
+    }
+    
+    function adjustSpeed() {
       clearInterval(interval);
-      number.innerText = totalDeaths.toLocaleString('en-US');
-    } else {
-      while (i > dates[stepDate][0]) stepDate++  
-      number.innerText = Math.round(i).toLocaleString('en-US');
-      date.innerText = dates[stepDate][1]
-      adjustSpeed();
+      switch (true) {
+        case i <= 5 && i < 1000:
+        t -= 100
+        break
+        case i > 5 && i < 1000 && t > 1: 
+        t -= 5
+        break
+        case i > 1000 && i < 100000:
+        if (increment < 81 ) increment++
+        break
+        case i > 700000 && i:
+        if (increment > 1) increment--
+        if (t < 800) t++
+        break
+        default:
+        break
+      }
+      interval = setInterval(updateDeathNumber, t);
     }
-  }
-  
-  function adjustSpeed() {
-    clearInterval(interval);
-    switch (true) {
-      case i <= 5 && i < 1000:
-      t -= 100
-      break
-      case i > 5 && i < 1000 && t > 1: 
-      t -= 5
-      break
-      case i > 1000 && i < 100000:
-      if (increment < 81 ) increment++
-      break
-      case i > 650000 && i < totalDeaths - 1200:
-      if (increment > 11 ) increment--
-      break
-      case i >= totalDeaths - 1200:
-      if (increment > 1) increment--
-      break
-      case i > totalDeaths - 800:
-      t++
-      break
-      default:
-      break
-    }
+    
     interval = setInterval(updateDeathNumber, t);
-  }
-  
-  interval = setInterval(updateDeathNumber, t);
   }
 }
 
