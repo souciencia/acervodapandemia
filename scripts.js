@@ -71,6 +71,7 @@ function updateViewAsLabel() {
   });
 }
 
+/* Animação de número de óbitos no banner inicial */
 function deathNumbersRizing() {
   if (window.location.href === "https://acervopandemia-souciencia.unifesp.br/") {
     const number = document.getElementById('death-numbers');
@@ -159,8 +160,94 @@ function deathNumbersRizing() {
   }
 }
 
+/* === TEST MODAL === */
+
+const myContent = [
+  {
+    frame: "https://open.spotify.com/embed/episode/6hALqgc5iDjKe3Wj0hDkTj?utm_source=generator",
+    text: "Texto test",
+  },
+  {
+    frame: "https://open.spotify.com/embed/episode/1g5gg4l3tdLWlLK7AaaCKj?utm_source=generator",
+    text: "some outro texto test",
+  }
+]
+
+function trapFocus(element, prevFocusableElement = document.activeElement) {
+    const focusableEls = Array.from(
+      element.querySelectorAll(
+        'a[href]:not([disabled]), button:not([disabled])'
+      )
+    );
+    const firstFocusableEl = focusableEls[0];
+    const lastFocusableEl = focusableEls[focusableEls.length - 1];
+    let currentFocus = null;
+
+    firstFocusableEl.focus();
+    currentFocus = firstFocusableEl;
+
+    const handleFocus = e => {
+      e.preventDefault();
+      // if the focused element "lives" in your modal container then just focus it
+      if (focusableEls.includes(e.target)) {
+        currentFocus = e.target;
+      } else {
+        // you're out of the container
+        // if previously the focused element was the first element then focus the last 
+        // element - means you were using the shift key
+        if (currentFocus === firstFocusableEl) {
+          lastFocusableEl.focus();
+        } else {
+          // you previously were focused on the last element so just focus the first one
+          firstFocusableEl.focus();
+        }
+        // update the current focus var
+        currentFocus = document.activeElement;
+      }
+    };
+
+    document.addEventListener("focus", handleFocus, true);
+
+    return {
+      onClose: () => {
+        document.removeEventListener("focus", handleFocus, true);
+        prevFocusableElement.focus();
+      }
+    };
+  };
+
+
+function toggleModal(e, n) {
+  const modal = document.getElementById("mapModalContainer");
+  const spotifyEmbedWindow = document.querySelector('iframe[src*="spotify.com/embed"]').contentWindow;
+  
+  if (n != 99) {
+    let frame = document.getElementById('mapIframe')
+    let text = document.getElementById('mapFrameText')
+    frame.setAttribute('src', myContent[n].frame);
+    text.innerHTML = myContent[n].text
+  }
+
+  if (modal.style.display === "none") {
+    modal.style.display = "block";
+    spotifyEmbedWindow.postMessage({command: 'play'}, '*');
+    trapped = trapFocus(modal);
+  } else {
+    modal.style.display = "none";
+    spotifyEmbedWindow.postMessage({command: 'pause'}, '*');
+    trapped.onClose();
+  } 
+}
+
+
+
 souCienciaPerformWhenDocumentIsLoaded(() => {
   updatePlaceholderFiles();
   updateViewAsLabel();
   deathNumbersRizing();
+  trapFocus();
+  toggleModal();
+  
 });
+
+
