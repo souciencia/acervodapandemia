@@ -217,23 +217,28 @@ function trapFocus(element, prevFocusableElement = document.activeElement) {
   };
 
 
-function toggleModal(e, n) {
+async function toggleModal(e, n) {
   const modal = document.getElementById("mapModalContainer");
+  let frame = document.getElementById('mapIframe')
+  let text = document.getElementById('mapFrameText')
   const spotifyEmbedWindow = document.querySelector('iframe[src*="spotify.com/embed"]').contentWindow;
   
   if (n != 99) {
-    let frame = document.getElementById('mapIframe')
-    let text = document.getElementById('mapFrameText')
     frame.setAttribute('src', myContent[n].frame);
     text.innerHTML = myContent[n].text
+    await new Promise((resolve) => setTimeout(resolve, 400))
   }
 
   if (modal.style.display === "none") {
     modal.style.display = "block";
     spotifyEmbedWindow.postMessage({command: 'play'}, '*');
     trapped = trapFocus(modal);
+    frame.style.opacity = 1;
+    await new Promise((resolve) => setTimeout(resolve, 300))
+
   } else {
     modal.style.display = "none";
+    frame.style.opacity = 0;
     spotifyEmbedWindow.postMessage({command: 'pause'}, '*');
     trapped.onClose();
   } 
