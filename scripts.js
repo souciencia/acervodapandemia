@@ -217,7 +217,7 @@ function trapFocus(element, prevFocusableElement = document.activeElement) {
   };
 
 
-function toggleModal(e, n) {
+async function toggleModal(e, n) {
   const modal = document.getElementById("mapModalContainer");
   const spotifyEmbedWindow = document.querySelector('iframe[src*="spotify.com/embed"]').contentWindow;
   
@@ -226,6 +226,7 @@ function toggleModal(e, n) {
     let text = document.getElementById('mapFrameText')
     frame.setAttribute('src', myContent[n].frame);
     text.innerHTML = myContent[n].text
+    await new Promise((resolve) => setTimeout(resolve, 100))
   }
 
   if (modal.style.display === "none") {
