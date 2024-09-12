@@ -472,103 +472,183 @@ body:not(.tainacan-admin-page) .tainacan-dialog .modal-card .modal-card-body {
 
 
 
-  :root{
-    --color-form-accent: #7dff7d;
-    --color-form-contrast: #fff;
-    --color-form-input: #595959;
-    --color-form-input-text: #e0e0e0;
-  }
+:root{
+  --color-form-accent: hsl(120, 100%, 75%);
+  --color-form-accent-dark: hsl(120, 100%, 35%);
+  --color-form-contrast: #fff;
+  --color-form-input: hsl(0, 0%, 35%);
+  --color-form-input-light: hsl(0, 0%, 45%);
+  --color-form-input-lighter: hsl(0, 0%, 88%);
+  --theme-font-size: 20px;
+  /* --font-size-form: var(--theme-font-size); */
+}
 
-  #form-colaboradores {
-    margin: 0 auto;
-    max-width: 800px;
+#form-colaboradores {
+  margin: 0 auto;
+  max-width: 800px;
 
-  }
-  .form-colaboradores-container {
+}
+.form-colaboradores-container {
+  width: 100%;
+}
+
+#form-colaboradores label {
+  display: block;
+  color: var(--color-form-contrast);
+  font-family: Voltaire, sans-serif;
+  font-size: var(--theme-font-size);
+}
+
+#form-colaboradores span {
+  font-family: var(--theme-font-family);
+  color: var(--color-form-input-lighter);
+}
+
+#form-colaboradores input[type="text"],
+#form-colaboradores input[type="email"],
+#form-colaboradores input[type="url"],
+#form-colaboradores textarea,
+#form-colaboradores select {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #333333;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 20px;
+    background-color: var(--color-form-input);
+    color: var(--color-form-input-lighter);
+
+}
+#form-colaboradores option {
+  color: var(--color-form-input-lighter);
+}
+
+#form-colaboradores input[type="radio"] {
+    margin-right: 5px;
+}
+
+#form-colaboradores input[type="submit"] {
     width: 100%;
-  }
+    padding: 10px;
+    background-color: #4CAF50;
+    color: var(--color-form-input-lighter);
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+    max-width: 70px;
+    margin: 1px auto;
+}
 
-  #form-colaboradores label {
-    display: block;
+#form-colaboradores input[type="submit"]:hover {
+    background-color: var(--color-form-accent);
     color: var(--color-form-contrast);
-    font-family: Voltaire, sans-serif;
-    font-size: var(--theme-font-size);
-  }
+}
 
-  #form-colaboradores span {
-    font-family: var(--theme-font-family);
-    color: var(--color-form-input-text);
-  }
+#form-colaboradores select[multiple] {
+    height: auto;
+}
 
-  #form-colaboradores input[type="text"],
-  #form-colaboradores input[type="email"],
-  #form-colaboradores input[type="url"],
-  #form-colaboradores textarea,
-  #form-colaboradores select {
-      width: calc(100% - 20px);
-      padding: 10px;
-      margin-bottom: 20px;
-      border: 1px solid #333333;
-      border-radius: 4px;
-      box-sizing: border-box;
-      font-size: 20px;
-      background-color: var(--color-form-input);
-      color: var(--color-form-input-text);
+#form-colaboradores textarea {
+    resize: vertical;
+}
 
-  }
-  #form-colaboradores option {
-    color: var(--color-form-input-text);
-  }
+#form-colaboradores .radio-item,
+#form-colaboradores .radio-fieldset {
+  display: flex;
+  align-items: center;
+}
+#form-colaboradores fieldset {
+  border: 1px solid var(--color-form-input);
+  border-radius: 6px;
+  margin-bottom: 2rem;
+}
 
-  #form-colaboradores input[type="radio"] {
-      margin-right: 5px;
-  }
+/* #form-colaboradores input[type="checkbox"] {
 
-  #form-colaboradores input[type="submit"] {
-      width: 100%;
-      padding: 10px;
-      background-color: #4CAF50;
-      color: var(--color-form-input-text);
-      border: none;
-      border-radius: 4px;
-      cursor: pointer;
-      font-size: 16px;
-      transition: background-color 0.3s ease;
-      max-width: 70px;
-      margin: 1px auto;
-  }
+ */
+/* } */
 
-  #form-colaboradores input[type="submit"]:hover {
-      background-color: var(--color-form-accent);
-      color: var(--color-form-contrast);
-  }
+input[type="checkbox"] {
+  -webkit-appearance: none;
+  appearance: none;
+  /* For iOS < 15 */
+  background-color: var(--color-form-input);
+  /* Not removed via appearance */
+  margin: 8px;
 
-  #form-colaboradores select[multiple] {
-      height: auto;
-  }
+  font: inherit;
+  color: currentColor;
+  width: 1.15em;
+  height: 1.15em;
+  border: 0.1em solid var(--color-form-input-light);
+  border-radius: 0.15em;
+  transform: translateY(-0.075em);
 
-  #form-colaboradores textarea {
-      resize: vertical;
-  }
+  display: grid;
+  place-content: center;
+}
 
-  #form-colaboradores .radio-container,
-  #form-colaboradores .radio-fieldset {
-    display: flex;
-    align-items: center;
-  }
-  #form-colaboradores .radio-fieldset {
-    border: 1px solid var(--color-form-input);
-    max-width: 300px;
-    border-radius: 6px;
-  }
-  #form-colaboradores .radio-container {
-    width: 80px;
-    margin-right: 2rem;
-  }
-  .radio-container label {
-    transform: translateY(25%);
-  }
+input[type="checkbox"]:checked {
+  background-color: var(--color-form-accent-dark);
+}
 
+
+input[type="checkbox"]::before {
+  content: "";
+  width: 0.65em;
+  height: 0.65em;
+  clip-path: polygon(14% 44%, 0 65%, 50% 100%, 100% 16%, 80% 0%, 43% 62%);
+  transform: scale(0);
+  transform-origin: bottom left;
+  transition: 120ms transform ease-in-out;
+  box-shadow: inset 1em 1em var(--color-form-accent);
+  /* Windows High Contrast Mode */
+  background-color: CanvasText;
+  /* background-color: CanvasText; */
+}
+
+input[type="checkbox"]:checked::before {
+  transform: scale(1);
+  /* z-index: 99; */
+}
+
+input[type="checkbox"]:focus {
+  outline: max(2px, 0.15em) solid currentColor;
+  outline-offset: max(2px, 0.15em);
+}
+
+
+
+
+#form-colaboradores .radio-fieldset {
+  max-width: 300px;
+}
+#form-colaboradores .radio-item {
+  width: 80px;
+  margin-right: 2rem;
+}
+.radio-item label {
+  transform: translateY(25%);
+}
+
+
+.form-grid {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  margin-bottom: 2rem;
+}
+
+
+.form-col {
+  width: 100%; 
+}
+.form-grid-item {
+  display: flex;
+  align-items: center;
+}
 
 /* === MAPA === */
 
