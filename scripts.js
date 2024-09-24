@@ -364,7 +364,7 @@ function deathNumbersRizing() {
 
 const myContent = [
   {
-    frame: "6hALqgc5iDjKe3Wj0hDkTj",
+    frame: "6LtheFKOrXPgbqnNhveLNl",
     text: '"Eu não tomei a vacina! Quem quiser seguir meu exemplo que siga...". Coletânea de falas em que Jair Bolsonaro induz a hesitação vacinal, disseminando desinformação acerca das vacinas contra a covid-19.',
   },
   {
