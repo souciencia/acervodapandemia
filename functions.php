@@ -3,6 +3,8 @@ if (! defined('WP_DEBUG')) {
 	die( 'Direct access forbidden.' );
 }
 
+const TOTAL_DE_MORTOS_ID_METADADO = 15398; // Id do metadado que guarda o total de mortos.
+
 /**
  * Enfileira scripts e estilos necessários.
  */
@@ -83,9 +85,19 @@ function souciencia_item_single_after_attachments() {
 
 	if ( !empty( $item->get_description() )  ) : ?>
 <div class="metadata-slug-descricao tainacan-item-section__metadatum">
-  <h3 class="tainacan-metadata-label"><?php _e('Descrição'); ?></h3>
-  <p class="tainacan-metadata-value" style="font-size: var(--theme-font-size,var(--fontSize));">
-    <?php echo $item->get_description(); ?></p>
+  	<h3 class="tainacan-metadata-label"><?php _e('Descrição'); ?></h3>
+  	<p class="tainacan-metadata-value" style="font-size: var(--theme-font-size,var(--fontSize));">
+    	<?php
+			echo $item->get_description();
+
+			$total_mortos = get_post_meta( $item->get_id(), TOTAL_DE_MORTOS_ID_METADADO, true );
+
+			if ( $total_mortos ) {
+				$message = 'Até essa data, registrava' . ( ($total_mortos == 1 || $total_mortos == '1') ? '' : 'm' ) . '-se <strong>' . number_format($total_mortos,0,',','.') . '</strong> óbito' . ( ($total_mortos == 1 || $total_mortos == '1') ? '' : 's' ) . ' pela covid-19*.';
+				echo '<p style="text-align: center; color: var(--theme-link-initial-color);">' . $message . '<br><small>Dados do site <a href="https://covid.saude.gov.br" target="_blank">https://covid.saude.gov.br</a></small></p>';
+			}
+		?>
+	</p>
 </div>
 <?php endif;
 }

@@ -4,7 +4,7 @@
  * Author: Mateus Wetah
  * Template: blocksy
  * Text Domain: souciencia
- * Version: 0.1.0
+ * Version: 0.1.7
  */
 .wp-block-group.is-style-souciencia-clickable-card > .wp-block-image img,
 .wp-block-group.is-style-souciencia-clickable-card > .wp-block-image img {
@@ -649,7 +649,13 @@ body:not(.tainacan-admin-page) .tainacan-dialog .modal-card .modal-card-body {
 }
 
 #tainacan-item-submission-form .tainacan-finder-columns-container {
-  background-color: var(--color-form-input);
+  background-color: var(--theme-palette-color-7);
+  --tainacan-gray1: var(--color-form-input);
+  max-height: 90vh;
+}
+#tainacan-item-submission-form .tainacan-metadatum-component--tainacan-taxonomy .tainacan-form[is-modal=false] {
+  padding: 0px !important;
+  margin-top: 0;
 }
 
 #tainacan-item-submission-form option {

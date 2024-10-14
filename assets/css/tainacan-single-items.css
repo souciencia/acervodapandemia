@@ -159,6 +159,10 @@
 .tainacan-item-single-page .tainacan-item-single .tainacan-item-section--metadata-sections > .tainacan-item-section--metadata:has(#metadata-section-o-que-a-ciencia-diz) .metadata-type-ainacan_url_plugin_metadata_type .tainacan-metadata-value > :not(.multivalue-separator) {
     display: list-item;
 }
+.tainacan-item-single-page .tainacan-item-single .tainacan-item-section--metadata-sections > .tainacan-item-section--metadata:has(#metadata-section-numero-de-obitos) {
+    display: none;
+    visibility: hidden;
+}
 .tainacan-item-single-page .tainacan-item-single.tainacan-item-single--layout-type-dam {
     grid-template-areas:
         'document   ' 
@@ -174,6 +178,10 @@
     padding-top: 2rem;
     margin-top: 1rem;
     grid-area: description;
+}
+.tainacan-item-single-page .tainacan-item-single .metadata-slug-numero-de-obitos {
+    display: none;
+    visibility: hidden;
 }
 .tainacan-item-single-page .tainacan-item-single .tainacan-item-section__metadata .metadata-slug-transcricao {
     column-span: all;
