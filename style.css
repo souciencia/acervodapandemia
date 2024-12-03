@@ -533,10 +533,6 @@ body:not(.tainacan-admin-page) .tainacan-dialog .modal-card .modal-card-body {
   top: 55px;
   left: 710px; 
 }
-.my-pin-2 {
-  top: 155px;
-  left: 395px; 
-}
 
 .my-map-iframe {
   border-radius: 12px
