@@ -188,7 +188,7 @@ const myContent = [
     text: '"Eu não tomei a vacina! Quem quiser seguir meu exemplo que siga...". Coletânea de falas em que Jair Bolsonaro induz a hesitação vacinal, disseminando desinformação acerca das vacinas contra a covid-19.',
   },
   {
-    frame: "1g5gg4l3tdLWlLK7AaaCKj",
+    frame: "",
     text: '"Não tem comprovação científica? Sim, sempre disse que não tinha." Falas de Bolsonaro defendendo a hidroxicloroquina, apesar da falta de evidências científicas que comprovem sua eficácia.',
   },
   {
