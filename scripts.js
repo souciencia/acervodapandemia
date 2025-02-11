@@ -78,9 +78,9 @@ function deathNumbersRizing() {
     const date = document.getElementById('death-date');
     const totalDeaths = 712781;
     let interval;
-    let t = 800;
+    let t = 1;
     let i = 0;
-    let increment = 1;
+    let increment = 101;
     let stepDate = 0
         const dates = [
       [0, 'fevereiro de 2020'],
@@ -116,28 +116,8 @@ function deathNumbersRizing() {
       [681397, 'agosto de 2022'],
       [684817, 'setembro de 2022'],
       [686842, 'outubro de 2022'],
-      [688654, 'novembro de 2022'],
-      [690747, 'dezembro de 2022'],
-      [694806, 'janeiro de 2023'],
-      [697674, 'fevereiro de 2023'],
-      [700556, 'março de 2023'],
-      [701833, 'abril de 2023'],
-      [702907, 'maio de 2023'],
-      [703719, 'junho de 2023'],
-      [704794, 'julho de 2023'],
-      [705289, 'agosto de 2023'],
-      [705775, 'setembro de 2023'],
-      [706142, 'outubro de 2023'],
-      [707286, 'novembro de 2023'],
-      [708491, 'dezembro de 2023'],
-      [708638, 'janeiro de 2024'],
-      [709407, 'fevereiro de 2024'],
-      [710174, 'março de 2024'],
-      [711380, 'abril de 2024'],
-      [712205, 'maio de 2024'],
-      [712502, 'junho de 2024'],
-      [712720, 'julho de 2024'],
-      [712889, 'agosto de 2024'],
+      [689801, 'novembro de 2022'],
+      [693853, 'dezembro de 2022']
     ]
   
     
@@ -150,30 +130,7 @@ function deathNumbersRizing() {
         while (i > dates[stepDate][0]) stepDate++  
         number.innerText = Math.round(i)
         date.innerText = dates[stepDate][1]
-        adjustSpeed();
       }
-    }
-    
-    function adjustSpeed() {
-      clearInterval(interval);
-      switch (true) {
-        case i <= 5 && i < 1000:
-        t -= 100
-        break
-        case i > 5 && i < 1000 && t > 1: 
-        t -= 5
-        break
-        case i > 1000 && i < 100000:
-        if (increment < 81 ) increment++
-        break
-        case i > 700000 && i:
-        if (increment > 1) increment--
-        if (t < 800) t++
-        break
-        default:
-        break
-      }
-      interval = setInterval(updateDeathNumber, t);
     }
     
     interval = setInterval(updateDeathNumber, t);
