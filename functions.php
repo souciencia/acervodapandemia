@@ -41,7 +41,7 @@ function souciencia_item_single_page_hero_after() {
 		return;
 
 	$tipo_de_evidencia_metadata_id = 60;
-	$tipo_de_evidencia_necropolitica_term = 'Necrodiscurso ou Necroconduta';
+	$tipo_de_evidencia_necropolitica_term = 'Discurso ou conduta anticiência';
 	
 	$item = tainacan_get_item();
 	if ( !$item )
